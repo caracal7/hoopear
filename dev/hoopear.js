@@ -32,7 +32,7 @@
         target.insertBefore(element, target.firstChild);
     },
     _removeElement = function(element) {
-        element.parentNode.removeChild(element);
+        if (element.parentNode != null) element.parentNode.removeChild(element);
     },
     _addClass = function(element, klass) {
         if (!_hasClass(element, klass))
